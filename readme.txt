@@ -2,9 +2,11 @@ Website Description:
 A webpage dedicated to showing off projects likewise to a portfolio.
 
 Current Goals:
-- Decide on a nice structure
-- Add links to contact me
-- Achieve a fairly sleek and minimal design
+- Add Get Linked In in there
+- Create a Sidebar for Navigating through the page
+- Add Project Pictures / Descriptions
+- Solve the backToTop Button problem
+- Basically complete navigating with links!
 
 Long-Term Goals:
 - Allow for projects to be displayed on the same page (if possible)
