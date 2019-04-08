@@ -2,16 +2,15 @@
 <html>
     <style type = "text/css">
         body,html {
-            font-size: xx-large;
+            font-size: 1.666666vw;
             font-family: 'Raleway', sans-serif;
-            height:100vh;
-            margin: 0;
             overflow-x: hidden;
+            margin: 0;
             scroll-behavior: smooth;
         }
         .banner {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("attempt.jpg");
-            height: 75.1vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/attempt.jpg");
+            height: 77vh;
             background-position-x: 50%;
             background-position-y: 60%;
             background-repeat: no-repeat;
@@ -27,18 +26,22 @@
             color: white;
             z-index: 0;
         }
-        li {
+        .baricon {
             display: inline-block;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
             margin: 0;
         }
-        ul {
+        .iconlist {
             margin-top: -1.5rem;
-            background-color: lightskyblue;
+            background-color: #7FDBFF;
             width: 100%;
             border: none;
+            padding-bottom: 3rem;
+            z-index: 1;
             text-align: center;
+            padding: 0.375rem; 
+            position: relative
         }
         #topButton {
             display: none;
@@ -63,11 +66,31 @@
             height: 2.5rem;
             width: 2.5rem;
             border: none;
+            transition: 0.3s
+        }
+        .icon:hover {
+            height: 3rem;
+            width: 3rem;
+            transition:0.3s;
         }
         .minicon {
             height: 1rem;
             width: 1rem;
             border:none;
+            transition: 0.3s;
+        }
+        .minicon:hover {
+            height: 1.2rem;
+            width: 1.2rem;
+            transition: 0.3s;
+        }
+        .resume {
+            height: 1rem;
+            transition: 0.3s;
+        }
+        .resume:hover {
+            height: 1.2rem;
+            transition: 0.3s;
         }
         .propic {
             height: 12rem;
@@ -77,65 +100,107 @@
         #headbar {
             padding: 0.5rem 0.5rem;
             position: sticky;
+            position: -webkit-sticky;
             word-spacing: 0.5rem;
             top: 0;
-            z-index: 1;
+            z-index: 99;
             background: #3d9970;
             color:aliceblue;
         }
         .project {
-            margin-top: -1.375rem;
+            margin-top: -1rem;
             position:relative;
-            height: 92.6vh;
+            height: 100vh;
             background-color:antiquewhite;
+            border-bottom: 0.1rem solid saddlebrown;
+        }
+        .title {
+            text-align: center; 
+            margin: 0rem; 
+            padding-top: 3rem; 
+            font-size: 2.5rem;
+        }
+        .split {
+            position: absolute;
+            width: 50%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        .prevpic {
+            height: 15rem;
+            width: 17rem;
+            padding-right: 1rem;
+            float: right;
+        }
+        .preview {
+            left: 0rem;
+            border-right: 0.1rem solid saddlebrown;
+        }
+        .descrip {
+            right: 0rem;
+        }
+        .desctext {
+            float: left;
+            padding-left: 1rem;
+            list-style-type: none;
+            text-align: left;
+            margin-right: 10rem;
+        }
+        .nextButton {
+            position: absolute;
+            cursor: pointer;
+            background-color: inherit;
+            font: inherit;
+            border: none;
+            outline: none;
+            border-radius: 30%;
+            right: 10rem;
+            bottom: -10rem;
+            padding: 0.5rem;
+            transition: 0.5s;
+        }
+        .nextButton:hover {
+            padding-right: 1rem;
+            transition: 0.5s;
+        }
+        .nextButton:after {
+            content: ' \00bb';
         }
     </style>
 
-    <script type="text/javascript">
-        window.onscroll = function() {handleScroll()};
-
-        function handleScroll() {
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("topButton").style.display = "block";
-            } else {
-                document.getElementById("topButton").style.display = "none";
-            }
-        }
-
-        function toTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        function goTo(section) {
-            if(section == "discord") {
-                document.body.scrollTop = 1000;
-                document.documentElement.scrollTop = 1000;
-            }
-        }
-    </script>
+    <script src="back.js"></script>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
     <title>Softfair</title>
 </head>
 <body>
     <div id="headbar">
-        <li style="float:right">
-            <a href="https://github.com/SangMNguyen" title="Github">
-                <img class="minicon" src="githubLight.png" alt="Github" />
+        <li class="baricon">
+            <a href="Resume.pdf" title="Resume">
+                <img src="assets/resumeicon.png" alt="Resume" class="resume"/>
             </a>
         </li>
-        <li style="">
-            <a href="Resume.pdf" title="Resume">
-                <img style="height: 1rem" src="resumeicon.png" alt="Resume" />
+        <li class="baricon" style="float: right">
+            <a href="https://www.linkedin.com/in/sangmnguyen" title="LinkedIn">
+                <img class="minicon" src="assets/linkedin.png" alt="LinkedIn Profile">
+            </a>
+        </li>
+        <li class="baricon" style="float:right">
+            <a href="https://github.com/SangMNguyen" title="Github">
+                <img class="minicon" src="assets/githubLight.png" alt="Github" />
             </a>
         </li>
     </div>
 
     <div class="banner">
         <div class="banner-text">
-            <img class="propic" src="me.jpg" alt="Picture of Sang"/>
+            <img class="propic" src="assets/me.jpg" alt="Picture of Sang"/>
             <h1 style="font-size: 3rem; margin-top: 0rem;">SANG M. NGUYEN</h1>
             <p style="margin-top: -2rem;">I write scripts and I also write scripts.</p>
         </div>
@@ -143,33 +208,63 @@
 
     <button id="topButton" title="Go back to the Top" onclick="toTop()">Top</button>
 
-    <ul style="padding: 0.375rem; position: relative">
-        <h1 style="margin-top: -0.3rem;">Some Projects I've Worked On:</h1>
-        <li>
-            <a href="javascript:void(0)" title="Discordbot" onclick="goTo('discord')">
-                <img class="icon" src="discordicon.png" alt="Discordbot"/>
+    <ul class="iconlist">
+        <h1 style="margin-top: -0.3rem; margin-bottom: 0.75rem;">Some Projects I've Worked On:</h1>
+        <li class="baricon">
+            <a href="#discord" title="Discordbot">
+                <img class="icon" src="assets/discordicon.png" alt="Discordbot"/>
             </a>
         </li>
-        <li>
-            <a href="https://github.com/SangMNguyen/Pong" title="Pong">
-                <img class="icon" src="pong.png" alt="Pong"/>
+        <li class="baricon">
+            <a href="#pong" title="Pong">
+                <img class="icon" src="assets/pong.png" alt="Pong"/>
             </a>
         </li>
-        <li>
+        <li class="baricon">
             <a href="https://github.com/SangMNguyen/MusicApp" title="MusicApp">
-                <img class="icon" src="musicsymbol.png" alt="MusicApp"/>
+                <img class="icon" src="assets/musicsymbol.png" alt="MusicApp"/>
             </a>
         </li>
-        <li>
+        <li class="baricon">
             <a href="https://web.njit.edu/~sn424/cs490.html" title="Exam Manager">
-                <img class="icon" src="Test.png" alt="Exam Manager" />
+                <img class="icon" src="assets/Test.png" alt="Exam Manager" />
             </a>
         </li>
     </ul>
 
-    <div class="project">
-        <h1> FILLER </h1>
-    </div>
+    <section class="project" id="discord">
+        <h1 class="title">Discord Bot</h1>
+        <div class="split preview">
+            <img class="prevpic" src="assets/discordpre.png" alt="Bot Preview" />
+            <a href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot">
+                <img class="resume" src="assets/githubName.png" alt="Github Link" />
+            </a>
+        </div>
+
+        <div class="split descrip">
+            <p class="desctext">
+                A Discord Bot originally written for personal use and basically for fun. This ongoing project offers many features like adding music player capabilities and fun games like blackjack.
+            </p>
+
+            <button class="nextButton" onclick="goTo('pong')"><span class="nbText">Next Project</span></button>
+        </div>
+    </section>
+
+    <section class="project" id="pong">
+            <h1 class="title">Pong Game</h1>
+            <div class="split preview">
+                <img class="prevpic" src="assets/placeholder.png" alt="Pong Gameplay" />
+                <a href="https://github.com/SangMNguyen/Pong" title="Github for Pong">
+                    <img class="resume" src="assets/githubName.png" alt="Github Link" />
+                </a>
+            </div>
+    
+            <div class="split descrip">
+                <p class="desctext">
+                    My own rendition of the popular game, Pong, which will not only offer a two-player mode, but a singleplayer mode against an AI. There will also be an additional mechanic where a player could hold the ball before hitting it back.
+                </p>
+            </div>
+        </section>
 </body>
 
 </html>
