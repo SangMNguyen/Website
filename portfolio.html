@@ -110,9 +110,8 @@
         .project {
             margin-top: -1rem;
             position:relative;
-            height: 100vh;
+            height: 105vh;
             background-color:antiquewhite;
-            border-bottom: 0.1rem solid saddlebrown;
         }
         .title {
             text-align: center; 
@@ -136,7 +135,7 @@
         }
         .preview {
             left: 0rem;
-            border-right: 0.1rem solid saddlebrown;
+            border-right: 0.1rem solid currentColor;
         }
         .descrip {
             right: 0rem;
@@ -148,25 +147,53 @@
             text-align: left;
             margin-right: 10rem;
         }
-        .nextButton {
+        .github {
+            position: absolute;
+            bottom: 8rem;
+            right: 26.5rem;
+        }
+        .nextButton, .backButton {
             position: absolute;
             cursor: pointer;
             background-color: inherit;
+            text-decoration: none;
+            color: inherit;
             font: inherit;
             border: none;
             outline: none;
-            border-radius: 30%;
             right: 10rem;
-            bottom: -10rem;
+            bottom: 3rem;
             padding: 0.5rem;
             transition: 0.5s;
         }
-        .nextButton:hover {
+        .backButton {
+            right: 18rem;
+        }
+        .nextButton:hover, .backButton:hover {
             padding-right: 1rem;
             transition: 0.5s;
         }
         .nextButton:after {
             content: ' \00bb';
+        }
+        .backButton:before {
+            content: '\00ab  ';
+        }
+        #discord {
+            background-color: #7289DA;
+            color: #FFFFFF;
+        }
+        #pong {
+            background-color: black;
+            color: #00FF40;
+        }
+        #musicapp {
+            background-color: #393F4D;
+            color: #FEDA6A;
+        }
+        #exam {
+            background-color: #3A4660;
+            color: #C9AF98;
         }
     </style>
 
@@ -182,17 +209,17 @@
 <body>
     <div id="headbar">
         <li class="baricon">
-            <a href="Resume.pdf" title="Resume">
+            <a href="Resume.pdf" title="Resume" target="_blank">
                 <img src="assets/resumeicon.png" alt="Resume" class="resume"/>
             </a>
         </li>
         <li class="baricon" style="float: right">
-            <a href="https://www.linkedin.com/in/sangmnguyen" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/sangmnguyen" title="LinkedIn" target="_blank">
                 <img class="minicon" src="assets/linkedin.png" alt="LinkedIn Profile">
             </a>
         </li>
         <li class="baricon" style="float:right">
-            <a href="https://github.com/SangMNguyen" title="Github">
+            <a href="https://github.com/SangMNguyen" title="Github" target="_blank">
                 <img class="minicon" src="assets/githubLight.png" alt="Github" />
             </a>
         </li>
@@ -221,50 +248,102 @@
             </a>
         </li>
         <li class="baricon">
-            <a href="https://github.com/SangMNguyen/MusicApp" title="MusicApp">
+            <a href="#musicapp" title="MusicApp">
                 <img class="icon" src="assets/musicsymbol.png" alt="MusicApp"/>
             </a>
         </li>
         <li class="baricon">
-            <a href="https://web.njit.edu/~sn424/cs490.html" title="Exam Manager">
+            <a href="#exam" title="Exam Manager">
                 <img class="icon" src="assets/Test.png" alt="Exam Manager" />
             </a>
         </li>
     </ul>
 
+    <!-- Discord -->
     <section class="project" id="discord">
         <h1 class="title">Discord Bot</h1>
         <div class="split preview">
             <img class="prevpic" src="assets/discordpre.png" alt="Bot Preview" />
-            <a href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot">
-                <img class="resume" src="assets/githubName.png" alt="Github Link" />
-            </a>
         </div>
 
         <div class="split descrip">
             <p class="desctext">
-                A Discord Bot originally written for personal use and basically for fun. This ongoing project offers many features like adding music player capabilities and fun games like blackjack.
+                A Discord Bot originally written for personal use and basically for fun.
+                This ongoing project offers many features like adding music player 
+                capabilities and fun games like blackjack, rock paper scissors, or high
+                and low.
             </p>
-
-            <button class="nextButton" onclick="goTo('pong')"><span class="nbText">Next Project</span></button>
         </div>
+        <a class="github" href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot" target="_blank">
+            <img class="resume" src="assets/githubNameLight.png" alt="Github Link" />
+        </a>
+        <a class="nextButton" href="#pong">Next Project</a>
     </section>
 
+    <!-- Pong -->
     <section class="project" id="pong">
-            <h1 class="title">Pong Game</h1>
-            <div class="split preview">
-                <img class="prevpic" src="assets/placeholder.png" alt="Pong Gameplay" />
-                <a href="https://github.com/SangMNguyen/Pong" title="Github for Pong">
-                    <img class="resume" src="assets/githubName.png" alt="Github Link" />
-                </a>
-            </div>
+        <h1 class="title">Pong Game</h1>
+        <div class="split preview">
+            <img class="prevpic" src="assets/placeholder.png" alt="Pong Gameplay" />
+        </div>
     
-            <div class="split descrip">
-                <p class="desctext">
-                    My own rendition of the popular game, Pong, which will not only offer a two-player mode, but a singleplayer mode against an AI. There will also be an additional mechanic where a player could hold the ball before hitting it back.
-                </p>
-            </div>
-        </section>
+        <div class="split descrip">
+            <p class="desctext">
+                My own rendition of the popular game, Pong, which will not only offer a
+                two-player mode, but a singleplayer mode against an AI. There will also
+                be an additional mechanic where a player could hold the ball before 
+                hitting it back.
+            </p>
+        </div>
+        <a class="github" href="https://github.com/SangMNguyen/Pong" title="Github for Pong" target="_blank">
+            <img class="resume" src="assets/githubPong.png" alt="Github Link" />
+        </a>
+        <a class="backButton" href="#discord">Previous Project</a>
+        <a class="nextButton" href="#musicapp">Next Project</a>
+    </section>
+
+    <!-- Music App -->
+    <section class="project" id="musicapp">
+        <h1 class="title">Music Sharing Application</h1>
+        <div class="split preview">
+            <img class="prevpic" src="assets/placeholder.png" alt="MusicApp View" />
+        </div>
+    
+        <div class="split descrip">
+            <p class="desctext">
+                My own rendition of the popular game, Pong, which will not only offer a two-player mode, 
+                but a singleplayer mode against an AI. There will also be an additional mechanic where 
+                a player could hold the ball before hitting it back.
+            </p>
+        </div>
+        <a class="github" href="https://github.com/SangMNguyen/MusicApp" title="Github for MusicApp" target="_blank">
+            <img class="resume" src="assets/githubApp.png" alt="Github Link" />
+        </a>
+        <a class="backButton" href="#pong">Previous Project</a>
+        <a class="nextButton" href="#exam">Next Project</a>
+    </section>
+
+    <!-- Exam Manager -->
+    <section class="project" id="exam">
+        <h1 class="title">Exam Manager</h1>
+        <div class="split preview">
+            <img class="prevpic" src="assets/exampreview.png" alt="Exam Preview"/>
+        </div>
+    
+        <div class="split descrip">
+            <p class="desctext">
+                An Exam Manager web application where a user could attempt to login
+                as a student or a teacher, given the correct credentials, and either
+                take or create an exam. This was a team project including me, and 
+                two others. Most of my contribution is located in the Front-End.
+            </p>
+        </div>
+        <a class="github" href="https://github.com/ar664/cs490/tree/develop/frontend" title="Github for FrontEnd" target="_blank">
+            <img class="resume" src="assets/githubExam.png" alt="Github Link" />
+        </a>
+        <a class="backButton" href="#musicapp">Previous Project</a>
+        <a class="nextButton" href="#exam">Contact Me</a>
+    </section>
 </body>
 
 </html>
