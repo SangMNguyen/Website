@@ -4,9 +4,15 @@
         body,html {
             font-size: 1.666666vw;
             font-family: 'Raleway', sans-serif;
-            overflow-x: hidden;
             margin: 0;
+            margin-right: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             scroll-behavior: smooth;
+        }
+        textarea {
+            resize: none;
         }
         .banner {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/attempt.jpg");
@@ -34,7 +40,7 @@
         }
         .iconlist {
             margin-top: -1.5rem;
-            background-color: #7FDBFF;
+            background-color: #3D9970;
             width: 100%;
             border: none;
             padding-bottom: 3rem;
@@ -69,6 +75,7 @@
             transition: 0.3s
         }
         .icon:hover {
+            margin-top: -0.5rem;
             height: 3rem;
             width: 3rem;
             transition:0.3s;
@@ -80,22 +87,39 @@
             transition: 0.3s;
         }
         .minicon:hover {
+            margin-bottom: -0.2rem;
+            margin-left: -0.2rem;
             height: 1.2rem;
             width: 1.2rem;
             transition: 0.3s;
         }
-        .resume {
+        #resume {
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
             height: 1rem;
             transition: 0.3s;
         }
-        .resume:hover {
+        #contactinfo {
+            position: absolute;
+            left: 6rem;
+            top: 0.5rem;
+            height: 1rem;
+            transition: 0.3s;
+        }
+        #resume:hover, #contactinfo:hover, .githlink:hover {
             height: 1.2rem;
+            transition: 0.3s;
+        }
+        .githlink {
+            height: 1rem;
             transition: 0.3s;
         }
         .propic {
             height: 12rem;
-            width: 13rem;
+            width: 15rem;
             border: none;
+            border-radius: 10%;
         }
         #headbar {
             padding: 0.5rem 0.5rem;
@@ -110,13 +134,13 @@
         .project {
             margin-top: -1rem;
             position:relative;
-            height: 105vh;
+            height: 110vh;
             background-color:antiquewhite;
         }
         .title {
             text-align: center; 
             margin: 0rem; 
-            padding-top: 3rem; 
+            padding-top: 4rem; 
             font-size: 2.5rem;
         }
         .split {
@@ -149,8 +173,8 @@
         }
         .github {
             position: absolute;
-            bottom: 8rem;
-            right: 26.5rem;
+            bottom: 9rem;
+            left: 30.5rem;
         }
         .nextButton, .backButton {
             position: absolute;
@@ -162,15 +186,19 @@
             border: none;
             outline: none;
             right: 10rem;
-            bottom: 3rem;
+            bottom: 5rem;
             padding: 0.5rem;
             transition: 0.5s;
         }
         .backButton {
             right: 18rem;
         }
-        .nextButton:hover, .backButton:hover {
+        .backButton:hover {
             padding-right: 1rem;
+            transition: 0.5s;
+        }
+        .nextButton:hover {
+            right: 9.5rem;
             transition: 0.5s;
         }
         .nextButton:after {
@@ -195,6 +223,78 @@
             background-color: #3A4660;
             color: #C9AF98;
         }
+        #contact {
+            margin-top: -1.25rem;
+            position: relative;
+            text-align: center;
+            padding-top: 1rem;
+            height: 75vh;
+            color: #EDF5E1;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/background3.jpg");
+            background-position-x: 50%;
+            background-position-y: 65%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        input, #message {
+            background: inherit;
+            width: 10rem;
+            padding: 0.75rem;
+            border: none;
+            border-bottom: 0.01rem solid #FFFFFF;
+            outline: none;
+            color: #5CDB95;
+            font-family: 'Raleway', 'sans-serif';
+            font-size: 0.5rem;
+        }
+        ::placeholder {
+            color: #5CDB95;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: #5CDB95;
+        }
+        ::-ms-input-placeholder {
+            color: #8EE4AF;
+        }
+        #webinfo {
+            margin-top: -0.5rem;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.5rem;
+            height: 3.5vh;
+            color: #9A9EAB;
+            background-color: #5D535E;
+        }
+        #send {
+            font-family: 'Raleway', 'sans-serif';
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            color: #EDF5E1;
+            background-color: #379683;
+            transition: 0.3s;
+        }
+        #send:hover {
+            background-color: #5CDB95;
+            transition: 0.3s;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            border-bottom: 0.01rem solid #FFFFFF;
+            -webkit-text-fill-color: #5CDB95;
+            color: #5CDB95;
+            transition: background-color 5000s ease-in-out 0s;
+        }
     </style>
 
     <script src="back.js"></script>
@@ -210,7 +310,12 @@
     <div id="headbar">
         <li class="baricon">
             <a href="Resume.pdf" title="Resume" target="_blank">
-                <img src="assets/resumeicon.png" alt="Resume" class="resume"/>
+                <img src="assets/resumeicon.png" alt="Resume" id="resume"/>
+            </a>
+        </li>
+        <li class="baricon">
+            <a href="#contact" title="Contact Information">
+                <img src="assets/contacticon.png" alt="Contact" id="contactinfo" />
             </a>
         </li>
         <li class="baricon" style="float: right">
@@ -227,7 +332,7 @@
 
     <div class="banner">
         <div class="banner-text">
-            <img class="propic" src="assets/me.jpg" alt="Picture of Sang"/>
+            <img class="propic" src="assets/Sang.jpg" alt="Picture of Sang"/>
             <h1 style="font-size: 3rem; margin-top: 0rem;">SANG M. NGUYEN</h1>
             <p style="margin-top: -2rem;">I write scripts and I also write scripts.</p>
         </div>
@@ -236,7 +341,7 @@
     <button id="topButton" title="Go back to the Top" onclick="toTop()">Top</button>
 
     <ul class="iconlist">
-        <h1 style="margin-top: -0.3rem; margin-bottom: 0.75rem;">Some Projects I've Worked On:</h1>
+        <h1 style="margin-top: -0.3rem; margin-bottom: 0.75rem; color: white;">Click on the Icons to See Some Projects!</h1>
         <li class="baricon">
             <a href="#discord" title="Discordbot">
                 <img class="icon" src="assets/discordicon.png" alt="Discordbot"/>
@@ -263,7 +368,9 @@
     <section class="project" id="discord">
         <h1 class="title">Discord Bot</h1>
         <div class="split preview">
-            <img class="prevpic" src="assets/discordpre.png" alt="Bot Preview" />
+            <a href="https://github.com/SangMNguyen/DiscordBot" title="Go to Github" target="_blank">
+                <img class="prevpic" src="assets/discordpre.png" alt="Bot Preview" />
+            </a>
         </div>
 
         <div class="split descrip">
@@ -275,7 +382,7 @@
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot" target="_blank">
-            <img class="resume" src="assets/githubNameLight.png" alt="Github Link" />
+            <img class="githlink" src="assets/githubBot.png" alt="Github Link" />
         </a>
         <a class="nextButton" href="#pong">Next Project</a>
     </section>
@@ -284,7 +391,9 @@
     <section class="project" id="pong">
         <h1 class="title">Pong Game</h1>
         <div class="split preview">
-            <img class="prevpic" src="assets/placeholder.png" alt="Pong Gameplay" />
+            <a href="https://github.com/SangMNguyen/Pong" title="Go to Github" target="_blank">
+                <img class="prevpic" src="assets/placeholder.png" alt="Pong Gameplay" />
+            </a>
         </div>
     
         <div class="split descrip">
@@ -296,7 +405,7 @@
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/Pong" title="Github for Pong" target="_blank">
-            <img class="resume" src="assets/githubPong.png" alt="Github Link" />
+            <img class="githlink" src="assets/githubPong.png" alt="Github Link" />
         </a>
         <a class="backButton" href="#discord">Previous Project</a>
         <a class="nextButton" href="#musicapp">Next Project</a>
@@ -306,7 +415,9 @@
     <section class="project" id="musicapp">
         <h1 class="title">Music Sharing Application</h1>
         <div class="split preview">
-            <img class="prevpic" src="assets/placeholder.png" alt="MusicApp View" />
+            <a href="https://github.com/SangMNguyen/MusicApp" title="Go to Github" target="_blank">
+                <img class="prevpic" src="assets/placeholder.png" alt="MusicApp View" />
+            </a>
         </div>
     
         <div class="split descrip">
@@ -317,7 +428,7 @@
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/MusicApp" title="Github for MusicApp" target="_blank">
-            <img class="resume" src="assets/githubApp.png" alt="Github Link" />
+            <img class="githlink" src="assets/githubApp.png" alt="Github Link" />
         </a>
         <a class="backButton" href="#pong">Previous Project</a>
         <a class="nextButton" href="#exam">Next Project</a>
@@ -327,7 +438,9 @@
     <section class="project" id="exam">
         <h1 class="title">Exam Manager</h1>
         <div class="split preview">
-            <img class="prevpic" src="assets/exampreview.png" alt="Exam Preview"/>
+            <a href="https://github.com/ar664/cs490/tree/develop/frontend" title="Go to Github" target="_blank">
+                <img class="prevpic" src="assets/exampreview.png" alt="Exam Preview"/>
+            </a>
         </div>
     
         <div class="split descrip">
@@ -339,10 +452,35 @@
             </p>
         </div>
         <a class="github" href="https://github.com/ar664/cs490/tree/develop/frontend" title="Github for FrontEnd" target="_blank">
-            <img class="resume" src="assets/githubExam.png" alt="Github Link" />
+            <img class="githlink" src="assets/githubExam.png" alt="Github Link" />
         </a>
         <a class="backButton" href="#musicapp">Previous Project</a>
-        <a class="nextButton" href="#exam">Contact Me</a>
+        <a class="nextButton" href="#contact">Contact Me</a>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1 style="margin-top: 0rem;">Contact Me</h1>
+        <p style="font-size: 0.75rem; margin-top: -1rem; color: inherit;">If you'd like to leave a message, fill out the form and I'll respond as soon as possible.</p>
+        <div class="split preview">
+            <form autocomplete="off">
+                <input type="text" placeholder="Name"><br>
+                <input type="email" placeholder="Email"><br>
+                <input type="text" placeholder="Subject"><br>
+                <textarea maxlength="160" placeholder="Message (Max of 160 chars.)" rows="5" id="message"></textarea> <br>
+                <button id="send">Send Message</button>
+            </form>
+        </div>
+        <div class="split descrip">
+            <h1>Contact Info</h1>
+            <p>Email: sangnguyenpublic@gmail.com</p>
+            <p>Cell: (862) 223-0708</p>
+        </div>
+    </section>
+
+    <section id="webinfo">
+        <a href="https://www.njit.edu/" style="padding: 2rem; color: inherit;">Courtesy of New Jersey Institute of Technology</a>
+        <p>Design by Sang Nguyen</p>
     </section>
 </body>
 
