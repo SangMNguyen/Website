@@ -16,7 +16,7 @@
         }
         .banner {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/attempt.jpg");
-            height: 77vh;
+            height: 23.5rem;
             background-position-x: 50%;
             background-position-y: 60%;
             background-repeat: no-repeat;
@@ -34,8 +34,8 @@
         }
         .baricon {
             display: inline-block;
-            padding-left: 1.5rem;
             padding-right: 1.5rem;
+            padding-left: 1.5rem;
             margin: 0;
         }
         .iconlist {
@@ -47,7 +47,7 @@
             z-index: 1;
             text-align: center;
             padding: 0.375rem; 
-            position: relative
+            position: relative;
         }
         #topButton {
             display: none;
@@ -76,6 +76,7 @@
         }
         .icon:hover {
             margin-top: -0.5rem;
+            margin-right: -0.5rem;
             height: 3rem;
             width: 3rem;
             transition:0.3s;
@@ -125,7 +126,7 @@
             padding: 0.5rem 0.5rem;
             position: sticky;
             position: -webkit-sticky;
-            word-spacing: 0.5rem;
+            min-height: 1.2rem;
             top: 0;
             z-index: 99;
             background: #3d9970;
@@ -134,7 +135,7 @@
         .project {
             margin-top: -1rem;
             position:relative;
-            height: 110vh;
+            height: 33rem;
             background-color:antiquewhite;
         }
         .title {
@@ -147,7 +148,7 @@
             position: absolute;
             width: 50%;
             text-align: center;
-            top: 50%;
+            top: 47.5%;
             transform: translateY(-50%);
             z-index: 1;
         }
@@ -173,7 +174,7 @@
         }
         .github {
             position: absolute;
-            bottom: 9rem;
+            bottom: 9.5rem;
             left: 30.5rem;
         }
         .nextButton, .backButton {
@@ -228,7 +229,7 @@
             position: relative;
             text-align: center;
             padding-top: 1rem;
-            height: 75vh;
+            height: 22.5rem;
             color: #EDF5E1;
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/background3.jpg");
             background-position-x: 50%;
@@ -245,7 +246,7 @@
             outline: none;
             color: #5CDB95;
             font-family: 'Raleway', 'sans-serif';
-            font-size: 0.5rem;
+            font-size: 1.5vh;
         }
         ::placeholder {
             color: #5CDB95;
@@ -258,6 +259,10 @@
             color: #8EE4AF;
         }
         #webinfo {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
             margin-top: -0.5rem;
             text-align: center;
             padding: 2rem;
@@ -268,10 +273,11 @@
         }
         #send {
             font-family: 'Raleway', 'sans-serif';
-            padding: 0.5rem;
+            font-size: 1.5vh;
+            padding: 1vh;
             border: none;
             outline: none;
-            border-radius: 50%;
+            border-radius: 10%;
             color: #EDF5E1;
             background-color: #379683;
             transition: 0.3s;
@@ -304,7 +310,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-    <title>Softfair</title>
+    <title>Projection</title>
 </head>
 <body>
     <div id="headbar">
@@ -341,7 +347,7 @@
     <button id="topButton" title="Go back to the Top" onclick="toTop()">Top</button>
 
     <ul class="iconlist">
-        <h1 style="margin-top: -0.3rem; margin-bottom: 0.75rem; color: white;">Click on the Icons to See Some Projects!</h1>
+        <h1 style="margin-top: -0.3rem; margin-bottom: 0.75rem; color: white; font-size: 2rem;">Click on the Icons to See Some Projects!</h1>
         <li class="baricon">
             <a href="#discord" title="Discordbot">
                 <img class="icon" src="assets/discordicon.png" alt="Discordbot"/>
@@ -375,10 +381,12 @@
 
         <div class="split descrip">
             <p class="desctext">
-                A Discord Bot originally written for personal use and basically for fun.
-                This ongoing project offers many features like adding music player 
-                capabilities and fun games like blackjack, rock paper scissors, or high
-                and low.
+                Discord is an online communication application (like Skype) that offers
+                bots to entertains users in a server or help a server adminstrator or
+                owner manage their server. Admittedly, most bots lack a certain component
+                so most Discord servers have multiple bots. I intend to create an
+                all-purpose bot that that boasts a bountiful array of Entertainment 
+                and Utility functionalities.
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot" target="_blank">
@@ -398,10 +406,11 @@
     
         <div class="split descrip">
             <p class="desctext">
-                My own rendition of the popular game, Pong, which will not only offer a
-                two-player mode, but a singleplayer mode against an AI. There will also
-                be an additional mechanic where a player could hold the ball before 
-                hitting it back.
+                Pong, being one of the first videos, was something I thought I should try
+                my hand at. The project has the typical capabilities like singleplayer
+                mode, and 2-player mode. However, there will be an additional mechanic
+                where the player could catch, hold, and throw the ball where they'd like
+                at a higher speed than normal.
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/Pong" title="Github for Pong" target="_blank">
@@ -422,9 +431,11 @@
     
         <div class="split descrip">
             <p class="desctext">
-                My own rendition of the popular game, Pong, which will not only offer a two-player mode, 
-                but a singleplayer mode against an AI. There will also be an additional mechanic where 
-                a player could hold the ball before hitting it back.
+                I love listening to and sharing music, however I often see that the platforms
+                that provide those things are missing some desired functions. That is the 
+                motivation of this project. The project will give the users full-control of 
+                their playlists and queue, offer communities to aid in discovery of music, a 
+                sharper search process, and more.
             </p>
         </div>
         <a class="github" href="https://github.com/SangMNguyen/MusicApp" title="Github for MusicApp" target="_blank">
@@ -445,10 +456,9 @@
     
         <div class="split descrip">
             <p class="desctext">
-                An Exam Manager web application where a user could attempt to login
-                as a student or a teacher, given the correct credentials, and either
-                take or create an exam. This was a team project including me, and 
-                two others. Most of my contribution is located in the Front-End.
+                The Exam Manager is a web application which functions as a platform for
+                teachers to create exams and students to take the exams and receive grades.
+                This was a team project where I served mainly as the Front-End developer.
             </p>
         </div>
         <a class="github" href="https://github.com/ar664/cs490/tree/develop/frontend" title="Github for FrontEnd" target="_blank">
@@ -479,8 +489,9 @@
     </section>
 
     <section id="webinfo">
-        <a href="https://www.njit.edu/" style="padding: 2rem; color: inherit;">Courtesy of New Jersey Institute of Technology</a>
-        <p>Design by Sang Nguyen</p>
+        <a href="https://www.njit.edu/" style="color: inherit; flex-basis: 13rem;">Courtesy of New Jersey Institute of Technology</a>
+        <p style="flex-basis: 7.5rem; border-left: 0.01rem solid currentColor; border-right: 0.01rem solid currentColor">Design by Sang Nguyen</p>
+        <a href="https://github.com/SangMNguyen/Website" style="color: inherit; flex-basis: 7.5rem;">Github Link for Website</a>
     </section>
 </body>
 
