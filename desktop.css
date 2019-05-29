@@ -33,6 +33,13 @@ textarea {
     color: white;
     z-index: 0;
 }
+#myName {
+    font-size: 3rem;
+    margin-top: 0rem;
+}
+#headline {
+    margin-top: -2rem;
+}
 .baricon {
     display: inline-block;
     padding-right: 1.5rem;
@@ -116,6 +123,9 @@ textarea {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
+}
+#sideNav, #navMenu {
+    display: none;
 }
 #resume {
     position: absolute;
@@ -238,6 +248,9 @@ textarea {
     text-align: left; 
     float: left; 
 }
+.descBut, .descExit {
+    display: none;
+}
 .desctext {
     float: left;
     padding-left: 1rem;
@@ -249,8 +262,8 @@ textarea {
 .github {
     position: absolute;
     color: inherit;
-    bottom: 9.42rem;
-    left: 35.2rem;
+    bottom: -1.7rem;
+    left: 5.5rem;
 }
 .github:before {
     text-decoration: none;
@@ -291,10 +304,16 @@ textarea {
     transition: 0.5s;
 }
 .nextButton:after {
-    content: ' \00bb';
+    content: 'Next Project \00bb';
+}
+#contactBut:after {
+    content: 'Contact Me \00bb';
 }
 .backButton:before {
-    content: '\00ab  ';
+    content: '\00ab  Previous';
+}
+.backButton:after {
+    content: ' Project';
 }
 #discord {
     background-color: #7289DA;
@@ -325,6 +344,31 @@ textarea {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+#override {
+    border: none;
+}
+#contactHeader {
+    margin-top: 0rem;
+    font-size: 4rem;
+}
+#contactSub {
+    font-size: 1rem; 
+    margin-top: -3rem; 
+    color: inherit;
+}
+#emailLink {
+    border: 0.5rem solid #EDF5E1;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: 0.5s;
+}
+#emailLink:hover {
+    background-color: #EDF5E1;
+    color: #21BE95;
+    transition: 0.5s;
 }
 input, #message {
     background: inherit;
@@ -360,24 +404,18 @@ input, #message {
     color: #9A9EAB;
     background-color: #5D535E;
 }
-#send {
-    font-family: 'Raleway', 'sans-serif';
-    font-size: 1.5vh;
-    padding: 1vh;
-    border: none;
-    outline: none;
-    border-radius: 10%;
-    color: #EDF5E1;
-    background-color: #379683;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    transition: 0.3s;
+#domain {
+    color: inherit;
+    flex-basis: 13rem;
 }
-#send:hover {
-    background-color: #5CDB95;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    transition: 0.3s;
+#author {
+    flex-basis: 10rem;
+    border-left: 0.01rem solid currentColor;
+    border-right: 0.01rem solid currentColor;
+}
+#githForSite {
+    color: inherit;
+    flex-basis: 7.5rem;
 }
 
 input:-webkit-autofill,

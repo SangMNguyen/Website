@@ -25,7 +25,21 @@
     <title>Projection</title>
 </head>
 <body>
+    <div id="navMenu">
+        <a href="javascript:void(0)" id="navExit" onclick="closeSide()">&times;</a>
+        <a href="Resume.pdf" title="Resume" target="_blank">
+            <img src="assets/resumeicon.png" alt="Resume" id="resumeNav"/>
+        </a>
+        <a class="navlink" href="#discord" title="Discord">Discord</a>
+        <a class="navlink" href="#pong" title="Pong">Pong</a>
+        <a class="navlink" href="#musicapp" title="Music App">Music App</a>
+        <a class="navlink" href="#exam" title="Exam Manager">Exam Manager</a>
+        <a class="navlink" href="#contact" title="Contact Me">
+            <img src="assets/contacticon.png" alt="Contact Me" id="contactNav"/>
+        </a>
+    </div>
     <div id="headbar">
+        <button id="sideNav">&#8801;</button>
         <div id="headLeft">
             <li class="baricon">
                 <a href="Resume.pdf" title="Resume" target="_blank">
@@ -79,8 +93,8 @@
     <div class="banner">
         <div class="banner-text">
             <img class="propic" src="assets/Sang.jpg" alt="Picture of Sang"/>
-            <h1 style="font-size: 3rem; margin-top: 0rem;">SANG M. NGUYEN</h1>
-            <p style="margin-top: -2rem;">I write scripts and I also write scripts.</p>
+            <h1 id="myName">SANG M. NGUYEN</h1>
+            <p id="headline">I write scripts and I also write scripts.</p>
         </div>
     </div>
 
@@ -121,6 +135,7 @@
 
         <div class="split descrip">
             <p class="desctools">Created with: Javascript, Node.js, Discord.js</p>
+            <button class="descBut" onclick="seeDesc('discord')">More Info</button>
             <p class="desctext">
                 Discord is an online communication application that offers bots to entertain 
                 users in a server or aid server adminstrators. The current iteration of bots 
@@ -128,11 +143,12 @@
                 goals. I am in the process of creating an all-purpose bot that that boasts a 
                 bountiful array of Entertainment and Utility functionalities.
             </p>
+            <button class="descExit" onclick="closeDesc('discord')">&times;</button>
+            <a class="github" href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot" target="_blank">
+                <img class="githlink" src="assets/githubBot.png" alt="Github Link" />
+            </a>
         </div>
-        <a class="github" href="https://github.com/SangMNguyen/DiscordBot" title="Github for Bot" target="_blank">
-            <img class="githlink" src="assets/githubBot.png" alt="Github Link" />
-        </a>
-        <a class="nextButton" href="#pong">Next Project</a>
+        <a class="nextButton" href="#pong"></a>
     </section>
 
     <!-- Pong -->
@@ -146,6 +162,7 @@
     
         <div class="split descrip">
             <p class="desctools">Created with: HTML, Javascript</p>
+            <button class="descBut" onclick="seeDesc('pong')">More Info</button>
             <p class="desctext">
                 Pong, being one of the first video games, was something I thought I should try
                 my hand at. The project has the typical capabilities like singleplayer
@@ -153,17 +170,18 @@
                 where the player could catch, hold, and throw the ball where they'd like
                 at a higher speed than normally.
             </p>
+            <button class="descExit" onclick="closeDesc('pong')">&times;</button>
+            <a class="github" href="https://github.com/SangMNguyen/Pong" title="Github for Pong" target="_blank">
+                <img class="githlink" src="assets/githubPong.png" alt="Github Link" />
+            </a>
         </div>
-        <a class="github" href="https://github.com/SangMNguyen/Pong" title="Github for Pong" target="_blank">
-            <img class="githlink" src="assets/githubPong.png" alt="Github Link" />
-        </a>
-        <a class="backButton" href="#discord">Previous Project</a>
-        <a class="nextButton" href="#musicapp">Next Project</a>
+        <a class="backButton" href="#discord"></a>
+        <a class="nextButton" href="#musicapp"></a>
     </section>
 
     <!-- Music App -->
     <section class="project" id="musicapp">
-        <h1 class="title">Music Sharing Application</h1>
+        <h1 class="title">Music Sharing Platform</h1>
         <div class="split preview">
             <a href="https://github.com/SangMNguyen/MusicApp" title="Go to Github" target="_blank">
                 <img class="prevpic" src="assets/placeholder.png" alt="MusicApp View" id="apppic" />
@@ -171,7 +189,8 @@
         </div>
     
         <div class="split descrip">
-            <p class="desctools">Created with Javascript, React Native, Firebase</p>
+            <p class="desctools">Created with: Javascript, React Native, Firebase</p>
+            <button class="descBut" onclick="seeDesc('musicapp')">More Info</button>
             <p class="desctext">
                 I love listening to and sharing music, however I often see that the platforms
                 that provide those things are missing some desired functions. That is the 
@@ -179,12 +198,13 @@
                 their playlists and queue, offer communities to aid in discovery of music, a 
                 sharper search process, and more.
             </p>
+            <button class="descExit" onclick="closeDesc('musicapp')">&times;</button>
+            <a class="github" href="https://github.com/SangMNguyen/MusicApp" title="Github for MusicApp" target="_blank">
+                <img class="githlink" src="assets/githubApp.png" alt="Github Link" />
+            </a>
         </div>
-        <a class="github" href="https://github.com/SangMNguyen/MusicApp" title="Github for MusicApp" target="_blank">
-            <img class="githlink" src="assets/githubApp.png" alt="Github Link" />
-        </a>
-        <a class="backButton" href="#pong">Previous Project</a>
-        <a class="nextButton" href="#exam">Next Project</a>
+        <a class="backButton" href="#pong"></a>
+        <a class="nextButton" href="#exam"></a>
     </section>
 
     <!-- Exam Manager -->
@@ -197,44 +217,40 @@
         </div>
     
         <div class="split descrip">
-            <p class="desctools">Created with HTML, Javascript, PHP, MySQL</p>
+            <p class="desctools">Created with: HTML, Javascript, PHP, MySQL</p>
+            <button class="descBut" onclick="seeDesc('exam')">More Info</button>
             <p class="desctext">
                 The Exam Manager is a web application which functions as a platform for
                 teachers to create exams and students to take the exams and receive grades.
                 This was a team project where I served mainly as the Front-End developer.
             </p>
+            <button class="descExit" onclick="closeDesc('exam')">&times;</button>
+            <a class="github" href="https://github.com/ar664/cs490/tree/develop/frontend" title="Github for FrontEnd" target="_blank">
+                <img class="githlink" src="assets/githubExam.png" alt="Github Link" />
+            </a>
         </div>
-        <a class="github" href="https://github.com/ar664/cs490/tree/develop/frontend" title="Github for FrontEnd" target="_blank">
-            <img class="githlink" src="assets/githubExam.png" alt="Github Link" />
-        </a>
-        <a class="backButton" href="#musicapp">Previous Project</a>
-        <a class="nextButton" href="#contact">Contact Me</a>
+        <a class="backButton" href="#musicapp"></a>
+        <a class="nextButton" href="#contact" id="contactBut"></a>
     </section>
     
     <!-- Contact Section -->
     <section id="contact">
-        <h1 style="margin-top: 0rem;">Contact Me</h1>
-        <p style="font-size: 0.75rem; margin-top: -1rem; color: inherit;">If you'd like to leave a message, fill out the form and I'll respond as soon as possible.</p>
-        <div class="split preview">
-            <form autocomplete="off">
-                <input type="text" placeholder="Name"><br>
-                <input type="email" placeholder="Email"><br>
-                <input type="text" placeholder="Subject"><br>
-                <textarea maxlength="160" placeholder="Message (Max of 160 chars.)" rows="5" id="message"></textarea> <br>
-                <button id="send">Send Message</button>
-            </form>
+        <h1 id="contactHeader">Contact Me</h1>
+        <p id="contactSub">and I'll respond as soon as possible.</p>
+        <div class="split preview" id="override">
+            <a href="mailto:sangnguyenpublic@gmail.com" id="emailLink">Email Me Now!</a>
         </div>
         <div class="split descrip">
-            <h1>Contact Info</h1>
-            <p>Email: sangnguyenpublic@gmail.com</p>
-            <p>Cell: (862) 223-0708</p>
+            <h1 id="infoHead">Contact Info</h1>
+            <p id="eAddress">Email: sangnguyenpublic@gmail.com</p>
+            <p id="cellnum">Cell: (862) 223-0708</p>
         </div>
     </section>
 
     <section id="webinfo">
-        <a title="NJIT Official Website" href="https://www.njit.edu/" style="color: inherit; flex-basis: 13rem;" target="_blank">Courtesy of New Jersey Institute of Technology</a>
-        <p style="flex-basis: 10rem; border-left: 0.01rem solid currentColor; border-right: 0.01rem solid currentColor">Photos & Design by Sang Nguyen</p>
-        <a title="Website Code" href="https://github.com/SangMNguyen/Website" style="color: inherit; flex-basis: 7.5rem;" target="_blank">Github Link for Website</a>
+        <a title="NJIT Official Website" href="https://www.njit.edu/" id="domain" target="_blank">Courtesy of New Jersey Institute of Technology</a>
+        <p id="author">Photos & Design by Sang Nguyen</p>
+        <a title="Website Code" href="https://github.com/SangMNguyen/Website" id="githForSite" target="_blank">Github Link for Website</a>
     </section>
 </body>
 
