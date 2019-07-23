@@ -7,7 +7,7 @@ window.onload = function() {
 }
 var width = window.screen.width;
 var desktop = false;
-if(width >= 769) {
+if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     desktop = true;
 }
 var isOpen = false;
