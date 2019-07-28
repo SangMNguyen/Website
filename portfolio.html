@@ -34,6 +34,7 @@
         <a class="navlink" href="#pong" title="Pong">Pong</a>
         <a class="navlink" href="#musicapp" title="Music App">Music App</a>
         <a class="navlink" href="#exam" title="Exam Manager">Exam Manager</a>
+        <a class="navlink" href="#projectgg" title="Project GG">Project GG</a>
         <a class="navlink" href="#contact" title="Contact Me">
             <img src="assets/contacticon.png" alt="Contact Me" id="contactNav"/>
         </a>
@@ -74,6 +75,11 @@
                     <img class="minicon" src="assets/Test.png" alt="Exam Manager" />
                 </a>
             </li>
+            <li class="baricon">
+                <a href="#projectgg" title="Project GG">
+                    <img class="minicon" src="assets/gg.png" alt="Project GG" id="gg"/>
+                </a>
+            </li>
         </div>
 
         <div id="headRight">
@@ -89,6 +95,9 @@
             </li>
         </div>
     </div>
+    
+    <!-- Quick Fix for Mobile -->
+    <div id="mobileFill"></div>
 
     <div class="banner">
         <div class="banner-text">
@@ -120,6 +129,11 @@
         <li class="baricon">
             <a href="#exam" title="Exam Manager">
                 <img class="icon" src="assets/Test.png" alt="Exam Manager" />
+            </a>
+        </li>
+        <li class="baricon">
+            <a href="#projectgg" title="Project GG">
+                <img class="icon" src="assets/gg.png" alt="Project GG" id="ggbig" />
             </a>
         </li>
     </ul>
@@ -227,8 +241,34 @@
             </a>
         </div>
         <a class="backButton" href="#musicapp"></a>
-        <a class="nextButton" href="#contact" id="contactBut"></a>
+        <a class="nextButton" href="#projectgg"></a>
     </section>
+
+    <!-- Project GG -->
+    <section class="project" id="projectgg">
+        <h1 class="title">Project GG</h1>
+        <div class="split preview">
+            <a href="https://github.com/sangmattxavier/Project-GG" title="Go to Github" target="_blank">
+                <img class="prevpic" src="assets/ggprev.png" alt="GG Preview" />
+            </a>
+        </div>
+    
+        <div class="split descrip">
+            <p class="desctools">Created with: Javascript, React.js</p>
+            <button class="descBut" onclick="seeDesc('projectgg')">More Info</button>
+            <p class="desctext">
+                Project GG is a social media application that aims to create a space for recreational
+                and professional functions for the community and culture of video games. I am developing
+                this in a team of three, where we all serve as a single role of developer.
+            </p>
+            <button class="descExit" onclick="closeDesc('projectgg')">&times;</button>
+            <a class="github" href="https://github.com/sangmattxavier/Project-GG" title="Github for GG" target="_blank">
+                <img class="githlink" src="assets/githubGG.png" alt="Github Link" />
+            </a>
+        </div>
+        <a class="backButton" href="#exam"></a>
+        <a class="nextButton" href="#contact" id="contactBut"></a>
+        </section>
     
     <!-- Contact Section -->
     <section id="contact">

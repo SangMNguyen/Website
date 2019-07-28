@@ -331,6 +331,24 @@ textarea {
     background-color: #3A4660;
     color: #C9AF98;
 }
+#projectgg {
+    background-color: #2C265A;
+    color: #EA6341;
+}
+#gg {
+    width: 1.5rem;
+}
+#gg:hover {
+    margin-left: -0.5rem;
+    width: 2rem;
+}
+#ggbig {
+    width: 3.5rem;
+}
+#ggbig:hover {
+    margin-right: -0.5rem;
+    width: 4rem;
+}
 #contact {
     margin-top: -1.25rem;
     position: relative;
@@ -416,6 +434,10 @@ input, #message {
 #githForSite {
     color: inherit;
     flex-basis: 7.5rem;
+}
+
+#mobileFill {
+    display: none;
 }
 
 input:-webkit-autofill,
