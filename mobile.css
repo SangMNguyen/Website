@@ -3,7 +3,6 @@ body,html {
     font-size: 0.5vh;
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    margin-right: 0.2rem;
     text-align: center;
     display: flex;
     display: -webkit-flex;
@@ -11,6 +10,7 @@ body,html {
     justify-content: center;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    background-color: #3D9970;
 }
 .banner {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("assets/attempt.jpg");
@@ -133,17 +133,13 @@ body,html {
     position: -moz-sticky;
     position: -o-sticky;
     position: -webkit-sticky;
+    -webkit-transform: translateZ(0);
     min-height: 8vh;
     width: 100vw;
     top: 0;
     z-index: 98;
     background: #3d9970;
     color:aliceblue;
-}
-#mobileFill {
-    display: block;
-    width: 100vw;
-    height: 8vh;
 }
 #sideNav {
     user-select: none;
